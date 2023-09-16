@@ -1,0 +1,171 @@
+
+h1 {
+    font-size: 2.8em;
+    color: white;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.6);
+
+}
+p  {
+    width: 50%;
+    background-color: rgb(241, 241, 241);
+    padding: 3em;
+    margin: auto;
+}
+
+
+
+
+
+nav {
+    position: sticky;
+    z-index: 4;
+    top: 0px;
+}
+
+
+/*container pour la liste li, agit comme une navigation bar*/
+ul {
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    position: sticky;
+    z-index: 3;
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    margin: 5px;
+    padding: 20px;
+
+
+}
+
+li a {
+    z-index: 2;
+    flex-basis: auto;
+    flex-shrink: auto;
+    margin: 5px;
+    font-size: 1.2em;
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px, 3px, 5px, rgba(0, 0, 0, 0.8);
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+
+li a:hover {
+    background-color: black;
+    color: white;
+
+}
+
+.linkedin {
+    opacity: 0.8;
+    transition: transform .5s ease;
+    z-index: 2;
+
+}
+
+.linkedin:hover {
+    opacity: 1;
+    transform: scale(1.5);
+
+}
+
+/* les paragraphes/parties*/
+div {
+    font-size: 1.1em;
+    margin: 15px;
+}
+
+h2 {
+    font-size: 2.1em;
+}
+
+/* Presentation, besoin de faire une grid*/
+
+grid {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 150px, 200px, 0px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*ici block est lié à la présentation, a ne pas toucher*/
+
+.block  {
+    flex-basis: auto;
+    flex-shrink: auto;
+    margin: 5px;
+    padding: 15px;
+    font-size: 1.2em;
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 3px, 3px, 5px, rgba(0, 0, 0, 0.8);
+    animation-duration: 3s;
+    animation-name: slide;
+}
+
+body {
+    color: black;
+    font-family: "Roboto Slab", 'cambria', serif;  
+    text-align: center;
+    position: sticky; 
+    /*sticky est pour la navigation bar, elle est la zone où la bar va pouvoir se mettre, très important à ne pas toucher*/
+
+}
+
+
+.background {
+    position: relative;
+    content: "";
+    isolation: isolate;
+
+    background-image: url('../image/background_her.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 100px;
+}
+
+.background:after {
+    content: "";
+    filter: blur(4px);
+    inset: 0px 150px;
+    position: absolute;
+    z-index: -1;
+    background-color: rgb(139, 150, 255);
+    opacity: 0.4;
+}
+
+
+/*animation partie*/
+
+
+.animation {
+    animation-duration: 3s;
+    animation-name: slide;
+
+}
+
+@keyframes slide {
+
+    from {
+        opacity: 0.2;
+        transform: translateX(60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+
+
+    }
+
+}
+
+
